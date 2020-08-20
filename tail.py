@@ -29,12 +29,12 @@ def tail(file_path, poll_rate: float = 1, start_position: int = 2) -> str:
         while True:
             location = file.tell()
             line = file.readline()
-            file_status_obj = os.stat(path)
-            if file_size > file_status_obj.st_size:
+            current_file_size = os.stat(path).st_size
+            if file_size > current_file_size:
                 file.seek(0)
-                file_size = file_status_obj.st_size
+                file_size = current_file_size
                 continue
-            file_size = file_status_obj.st_size
+            file_size = current_file_size
             if not line:
                 time.sleep(poll_rate)
                 file.seek(location)
