@@ -10,7 +10,7 @@ def tail(file_path, poll_rate: float = 1, start_position: int = 2) -> str:
     is less than the last known size it's likely the file was rotated so it begins to read from the start of the file
     to handle the rotation.
 
-    This is a generator so it must be accessed as though it is in a iterator, e.g. with a for loop.
+    This is a generator so it must be accessed as though it is an iterator, e.g. with a for loop.
 
     Args:
         file_path (str): The path to the file, absolute or relative, (inclusive) to read from
