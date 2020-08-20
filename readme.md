@@ -8,7 +8,7 @@ usage cases in which we would want to read the log output of another
 program that might rotate the log.
 
 Note that `tail` is a generator object so it must be accessed as though
-it is in iterator, e.g. in a `for` loop.
+it is an iterator, e.g. in a `for` loop.
 
 ```py
 from tail import tail
