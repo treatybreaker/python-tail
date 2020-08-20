@@ -11,7 +11,7 @@ def tail(file_path, poll_rate: float = 1, start_position: int = 2) -> str:
     to handle the rotation.
 
     Args:
-        file_path (str): The path to the file (inclusive) to read from
+        file_path (str): The path to the file, absolute or relative, (inclusive) to read from
         poll_rate (float): How often the file should be checked for new data (default is 1)
         start_position (int): Where to start the file with os.seek(0, start_position), 0 would be from the start of
             the file and 2 would be a normal tail.
