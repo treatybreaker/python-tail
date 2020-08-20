@@ -20,7 +20,7 @@ def tail(file_path, poll_rate: float = 1, start_position: int = 2) -> str:
         file_path (str): The path to the file, absolute or relative, (inclusive) to read from
         poll_rate (float): How often the file should be checked for new data (default is 1)
         start_position (int): Where to start the file with os.seek(0, start_position), 0 would be from the start of
-            the file and 2 would be a normal tail.
+            the file and 2 would be a normal tail (default is 2)
     Yields:
         str: A single string representing any new data per line. If a previously read line has data appended to it, e.g.
             "hello" is a line and on the same line " world" is added making the line "hello world" as a whole then
